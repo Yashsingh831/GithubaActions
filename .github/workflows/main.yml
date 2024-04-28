@@ -11,3 +11,17 @@ jobs:
       run: npm test
     - name: lint
       run: npm run lint
+    - name: build
+      run: npm run build
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.3.3
+      with:
+        name: drop
+        path: dist    
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v4.1.7
+      with:
+        name: drop
