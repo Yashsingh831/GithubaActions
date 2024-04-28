@@ -3,7 +3,20 @@ on: issues
 
 jobs:
   context:
+    outputs:
+      myvar: ${{ steps.step1.outputs.test }}
     runs-on: ubuntu-latest
     steps:
     - name: PRINT DETAILS
       run: echo "${{ toJson(github.event) }}"
+    - name: set variable value for ouput
+      id: step1
+      run: echo "test=hello" >> "$GITHUB_OUTPUT"
+  printout:
+    needs: context
+    runs-on: windows-latest
+    steps:
+    - name: print value
+      run: echo "${{  needs.context.outputs.myvar }}"
+     
+
