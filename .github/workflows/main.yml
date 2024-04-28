@@ -19,6 +19,7 @@ jobs:
         name: drop
         path: dist    
   deploy:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
     - name: Download a Build Artifact
