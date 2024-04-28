@@ -1,5 +1,5 @@
 name: Context
-on: issues
+on: [issues,workflow_dispatch]
 
 jobs:
   context:
