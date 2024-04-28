@@ -1,0 +1,10 @@
+name: Context
+on:
+  issues:
+    types: [opened]
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    steps:
+    - name: PRINT DETAILS
+      run: echo ${{ github.event }}
