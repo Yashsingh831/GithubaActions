@@ -1,0 +1,12 @@
+name: Node lint
+On: [push,workflows_dispatch]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install dependencies
+      run: npm install
+    - name: Test
+      run: npm test
+    - name lint
+      run: npm lint
