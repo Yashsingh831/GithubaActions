@@ -17,6 +17,7 @@ jobs:
         echo "test=hello" >> "$GITHUB_OUTPUT"
         echo "action_state=yellow" >> "$GITHUB_ENV"
         echo "$var1"
+        echo "{{ vars.MYPASS}}"
     - run: echo "$action_state"
   printout:
     needs: context
