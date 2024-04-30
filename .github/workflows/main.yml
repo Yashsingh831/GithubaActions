@@ -32,6 +32,7 @@ jobs:
         name: drop
         path: dist    
   deploy:
+    
     needs: lint
     runs-on: ubuntu-latest
     steps:
@@ -39,3 +40,12 @@ jobs:
       uses: actions/download-artifact@v4.1.7
       with:
         name: drop
+  runalwaysjob:
+    
+    needs: deploy
+    if: jobs.deploy.result=='failure'
+    runs-on: windows-latest
+    steps:
+    - run: echo "i will run no matter what"
+
+ 
