@@ -40,11 +40,11 @@ jobs:
     - name: Download a Build Artifact
       uses: actions/download-artifact@v4.1.7
       with:
-        name: drop
+        name: drop1
   runalwaysjob:
-    
     needs: deploy
-    if: jobs.deploy.result=='failure'
+
+    if: failure()
     runs-on: windows-latest
     steps:
     - run: echo "i will run no matter what"
