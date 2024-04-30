@@ -21,10 +21,13 @@ jobs:
         echo "${{ vars.yash }}"
     - run: echo "$action_state"
   printout:
+    environment: test
     needs: context
     runs-on: windows-latest
     steps:
     - name: print value
-      run: echo "${{  needs.context.outputs.myvar }}"
+      run: |
+         echo "${{  needs.context.outputs.myvar }}"
+         echo ${{ secrets.mysecret }}
      
 
