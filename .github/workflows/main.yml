@@ -33,6 +33,7 @@ jobs:
         path: dist    
   deploy:
     
+    name: deploy
     needs: lint
     runs-on: ubuntu-latest
     steps:
