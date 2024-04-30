@@ -40,7 +40,7 @@ jobs:
     - name: Download a Build Artifact
       uses: actions/download-artifact@v4.1.7
       with:
-        name: drop1
+        name: drop
   runalwaysjob:
     needs: deploy
 
