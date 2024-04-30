@@ -42,7 +42,7 @@ jobs:
       with:
         name: drop
   runalwaysjob:
-    needs: deploy
+    needs: lint
 
     if: failure()
     runs-on: windows-latest
