@@ -18,6 +18,7 @@ jobs:
         echo "action_state=yellow" >> "$GITHUB_ENV"
         echo "$var1"
         echo "${{ secrets.MYPASS }}"
+        echo "${{ vars.yash }}"
     - run: echo "$action_state"
   printout:
     needs: context
