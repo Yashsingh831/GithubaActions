@@ -3,7 +3,7 @@ on:
   workflow_call:
     inputs:
       myvar:
-        required: true
+        required: false
         type: string
         default: yash
 jobs:
