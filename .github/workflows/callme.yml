@@ -1,7 +1,13 @@
 name: workflowcall
-on: workflow_call
+on: 
+  workflow_call:
+    inputs:
+      myvar:
+        required: true
+        type: string
+        default: yash
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-    - run: echo "hello"
+    - run: echo "${{  inputs.myvar }}"
