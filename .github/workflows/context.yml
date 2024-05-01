@@ -32,9 +32,8 @@ jobs:
 
 
   reusable:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: ./.github/workflows/callme.yml
+
+    uses: ./.github/workflows/callme.yml
 
      
 
