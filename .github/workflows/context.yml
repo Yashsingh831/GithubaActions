@@ -29,6 +29,11 @@ jobs:
       run: |
          echo "${{  needs.context.outputs.myvar }}"
          echo ${{ secrets.mysecret }}
+
+
+  reusable:
+    runs-on: ubuntu-latest
+    steps:
     - uses: ./.github/workflows/callme.yml
 
      
