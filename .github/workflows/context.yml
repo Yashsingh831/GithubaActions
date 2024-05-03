@@ -28,6 +28,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: print value
       run: |
+         ls
+         ls D:\a\GithubaActions\GithubaActions\github\workflows
          echo "${{  needs.context.outputs.myvar }}"
          echo ${{ secrets.mysecret }}
     - uses: ./github/workflows
