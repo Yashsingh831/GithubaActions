@@ -25,6 +25,7 @@ jobs:
     needs: context
     runs-on: windows-latest
     steps:
+    - uses: actions/checkout@v4
     - name: print value
       run: |
          echo "${{  needs.context.outputs.myvar }}"
