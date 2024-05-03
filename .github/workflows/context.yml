@@ -29,6 +29,9 @@ jobs:
       run: |
          echo "${{  needs.context.outputs.myvar }}"
          echo ${{ secrets.mysecret }}
+    - uses: ./github/workflows
+      with:
+        who-to-greet: Yash
 
 
   reusable:
