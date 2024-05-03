@@ -23,13 +23,13 @@ jobs:
   printout:
     environment: test
     needs: context
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     - name: print value
       run: |
          ls
-         ls D:\a\GithubaActions\GithubaActions\github\workflows
+         #ls D:\a\GithubaActions\GithubaActions\github\workflows
          echo "${{  needs.context.outputs.myvar }}"
          echo ${{ secrets.mysecret }}
     - uses: ./github/workflows
