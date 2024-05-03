@@ -32,7 +32,7 @@ jobs:
          #ls D:\a\GithubaActions\GithubaActions\github\workflows
          echo "${{  needs.context.outputs.myvar }}"
          echo ${{ secrets.mysecret }}
-    - uses: ./github/customaction/
+    - uses: ./.github/customaction/
       with:
         who-to-greet: Yash
 
